@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgumentReflector", "ArgumentReflector\ArgumentReflector.csproj", "{8B399919-A7C7-4C8D-B99F-3A229458898F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgumentReflector.Tests", "ArgumentReflector.Tests\ArgumentReflector.Tests.csproj", "{30261A19-54AF-4B98-BE27-B59F8D8AE072}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B399919-A7C7-4C8D-B99F-3A229458898F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B399919-A7C7-4C8D-B99F-3A229458898F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B399919-A7C7-4C8D-B99F-3A229458898F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B399919-A7C7-4C8D-B99F-3A229458898F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30261A19-54AF-4B98-BE27-B59F8D8AE072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30261A19-54AF-4B98-BE27-B59F8D8AE072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30261A19-54AF-4B98-BE27-B59F8D8AE072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30261A19-54AF-4B98-BE27-B59F8D8AE072}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

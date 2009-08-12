@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Test" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+
+	<UsingTask
+		AssemblyFile="lib\xunit.runner.msbuild.dll"
+		TaskName="Xunit.Runner.MSBuild.xunit"/>
+
+	<PropertyGroup Condition="'$(BuildType)' == ''">
+		<BuildType>Debug</BuildType>
+	</PropertyGroup>
+
+	<Target Name="Build">
+		<MSBuild 
+			Projects="src\ArgumentReflector.sln" 
+			Targets="Build" 
+			Properties="Configuration=$(BuildType)" />
+	</Target>
+
+	<Target Name="Test" DependsOnTargets="Build">
+		<xunit 
+			Assembly="build\Debug\ArgumentReflector.Tests.dll"
+			Html="build\Debug\ArgumentReflector.Tests.html"
+			NUnitXml="build\Debug\ArgumentReflector.Tests.Nunit.xml"
+			Xml="build\Debug\ArgumentReflector.Tests.Xunit.xml"
+			/>
+	</Target>
+
+	<Target Name="Release">
+		<MSBuild 
+			Projects="src\ArgumentReflector.sln" 
+			Targets="Build" 
+			Properties="Configuration=Release" />
+		<Copy	SourceFiles="src\ArgumentReflector\ArgumentReflector.cs" 
+			DestinationFolder="build\Release\"/>
+		<Delete Files="build\Release\ArgumentReflector.Tests.dll;build\Release\xunit.dll"/>
+	</Target>
+
+	<Target Name="Clean">
+		<RemoveDir Directories="build;src\ArgumentReflector\obj;src\ArgumentReflector.Tests\obj;"/>
+	</Target>
+
+</Project>
